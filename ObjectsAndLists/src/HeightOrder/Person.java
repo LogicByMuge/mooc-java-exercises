@@ -8,4 +8,8 @@ public class Person {
         this.name = name;
         this.height = height;
     }
+
+    public String toString() {
+        return name + " (" + height + " cm)";
+    }
 }
