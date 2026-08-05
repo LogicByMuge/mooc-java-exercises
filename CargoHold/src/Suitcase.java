@@ -10,12 +10,12 @@ public class Suitcase {
     }
 
     public void addItem(Item item) {
-        if((getTotalWeight() + item.getWeight()) < maximumWeight) {
+        if((totalWeight() + item.getWeight()) < maximumWeight) {
             items.add(item);
         }
     }
 
-    public int getTotalWeight() {
+    public int totalWeight() {
         int totalWeight = 0;
         for (int i = 0; i < items.size(); i++) {
             totalWeight += items.get(i).getWeight();
@@ -23,8 +23,28 @@ public class Suitcase {
         return totalWeight;
     }
 
+    public void printItems() {
+        for(int i = 0; i < items.size(); i++) {
+            System.out.println(items.get(i));
+        }
+    }
+
+    public Item heaviestItem() {
+        if(items.isEmpty()) {
+            return null;
+        }
+
+        Item heaviest = items.get(0);
+        for(int i = 0; i < items.size(); i++) {
+            if(heaviest.getWeight() < items.get(i).getWeight()) {
+                heaviest = items.get(i);
+            }
+        }
+        return heaviest;
+    }
+
     public String toString() {
         String label = items.size() == 1 ? " item" : " items";
-        return items.size() + label + " (" + getTotalWeight() + " kg)";
+        return items.size() + label + " (" + totalWeight() + " kg)";
     }
 }
