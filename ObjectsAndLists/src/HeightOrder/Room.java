@@ -32,4 +32,14 @@ public class Room {
         }
         return shortest;
     }
+
+    public Person take() {
+        if(people.isEmpty()) {
+            return null;
+        }
+        Person shortest = shortest();
+        people.remove(shortest());
+
+        return shortest;
+    }
 }
