@@ -18,4 +18,18 @@ public class Room {
     public ArrayList<Person> getPersons() {
         return people;
     }
+
+    public Person shortest() {
+        if(people.isEmpty()) {
+            return null;
+        }
+        Person shortest = people.get(0);
+
+        for(int i = 0; i < people.size(); i++) {
+            if(shortest.getHeight() > people.get(i).getHeight()) {
+                shortest = people.get(i);
+            }
+        }
+        return shortest;
+    }
 }
