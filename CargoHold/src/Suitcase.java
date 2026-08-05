@@ -24,6 +24,7 @@ public class Suitcase {
     }
 
     public String toString() {
-        return items.size() + " items (" + getTotalWeight() + " kg)";
+        String label = items.size() == 1 ? " item" : " items";
+        return items.size() + label + " (" + getTotalWeight() + " kg)";
     }
 }
