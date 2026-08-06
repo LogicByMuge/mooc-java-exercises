@@ -3,9 +3,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        TextUI ui = new TextUI(sc);
+        Scanner scanner = new Scanner(System.in);
+        SimpleDictionary dictionary = new SimpleDictionary();
 
-        ui.start();
+        TextUI textUI = new TextUI(scanner, dictionary);
+        textUI.start();
     }
 }

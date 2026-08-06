@@ -1,14 +1,14 @@
 package SimpleDictionary;
-import java.util.HashMap;
+import java.util.Dictionary;
 import java.util.Scanner;
 
 public class TextUI {
     private Scanner sc;
-    private HashMap<String,String> hashMap;
+    private SimpleDictionary dictionary;
 
-    public TextUI(Scanner sc) {
+    public TextUI(Scanner sc, SimpleDictionary dictionary) {
         this.sc = sc;
-        this.hashMap = new HashMap<>();
+        this.dictionary = dictionary;
     }
 
     public void start() {
@@ -23,7 +23,20 @@ public class TextUI {
                     break;
                 case "add":
                     System.out.print("Word: ");
+                    String word = sc.nextLine();
                     System.out.print("Translation: ");
+                    String translation = sc.nextLine();
+                    dictionary.addWord(word,translation);
+                    break;
+                case "search":
+                    System.out.print("To be translated: ");
+                    String search = sc.nextLine();
+                    String searched = dictionary.translate(search);
+                    if(searched == null) {
+                        System.out.println("Word " + search + " was not found");
+                        break;
+                    }
+                    System.out.println("Translation: " + searched);
                     break;
                 default:
                     System.out.println("Unknown Command");
