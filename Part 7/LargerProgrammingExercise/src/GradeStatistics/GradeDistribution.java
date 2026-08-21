@@ -1,52 +1,26 @@
 package GradeStatistics;
 
 public class GradeDistribution {
-    int five = 0;
-    int four = 0;
-    int three = 0;
-    int two = 0;
-    int one = 0;
-    int zero = 0;
+    int[] grades = new int[6];
 
     public void addGrade(int point) {
         if(point < 50) {
-            zero++;
+            grades[0]++;
         } else if (point < 60) {
-            one++;
+            grades[1]++;
         } else if (point < 70) {
-            two++;
+            grades[2]++;
         } else if (point < 80) {
-            three++;
+            grades[3]++;
         } else if (point < 90) {
-            four++;
+            grades[4]++;
         } else if (point >= 90) {
-            five++;
+            grades[5]++;
         }
     }
 
-    public void printStars(int num) {
-        int number = 0;
-        switch (num) {
-            case 5:
-                number = five;
-                break;
-            case 4:
-                number = four;
-                break;
-            case 3:
-                number = three;
-                break;
-            case 2:
-                number = two;
-                break;
-            case 1:
-                number = one;
-                break;
-            case 0:
-                number = zero;
-                break;
-        }
-        for(int i = 0; i < number; i++) {
+    private void printStars(int num) {
+        for (int i = 0; i < grades[num]; i++) {
             System.out.print("*");
         }
     }
