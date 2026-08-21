@@ -16,7 +16,7 @@ public class Main {
         System.out.println(linearSearch(books, 3));
         System.out.println(linearSearch(books, 10));
 
-        System.out.println(binarySearch(books, 3));
+        System.out.println(binarySearch(books, 1));
         System.out.println(binarySearch(books, 10));
     }
 
