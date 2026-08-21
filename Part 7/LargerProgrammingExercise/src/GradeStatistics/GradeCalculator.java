@@ -22,5 +22,6 @@ public class GradeCalculator {
                 gradeStatistics.getAveragePassing() : "-"));
         System.out.println("Pass percentage: " + (gradeStatistics.getNumOfPassing() > 0 ?
                 gradeStatistics.getPercentage() : "-"));
+        gradeStatistics.printGradeDistribution();
     }
 }
