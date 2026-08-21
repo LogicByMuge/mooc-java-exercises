@@ -32,7 +32,9 @@ public class Main {
         }
         average = (float) sumOfPoints / numOfPoints;
         averagePassing = (float) sumOfPassing / numOfPassing;
+        float percentage = (float) 100 * numOfPassing / numOfPoints;
         System.out.println("Point average (all): " + average);
         System.out.println("Point average (passing): " + (numOfPassing > 0 ? averagePassing : "-"));
+        System.out.println("Pass percentage: " + percentage);
     }
 }
