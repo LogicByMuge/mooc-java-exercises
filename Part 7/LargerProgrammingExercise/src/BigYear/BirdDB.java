@@ -14,10 +14,28 @@ public class BirdDB {
     }
 
     public void observation(String name) {
+        boolean found = false;
         for(Bird bird : birds) {
             if(bird.getName().contains(name)) {
                 bird.addObservation();
+                found = true;
             }
+        }
+        if (!found) {
+            System.out.println("Not a bird!");
+        }
+    }
+
+    public void one(String name) {
+        boolean found = false;
+        for(Bird bird : birds) {
+            if(bird.getName().contains(name)) {
+                System.out.println(bird);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Not a bird!");
         }
     }
 

@@ -32,6 +32,11 @@ public class UI {
                     String observe = sc.nextLine();
                     dataBase.observation(observe);
                     break;
+                case "One":
+                    System.out.print("Bird: ");
+                    String bird = sc.nextLine();
+                    dataBase.one(bird);
+                    break;
                 case "All":
                     dataBase.all();
                     break;
