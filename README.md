@@ -5,8 +5,8 @@ My solutions as I work through the University of Helsinki's Java Programming MOO
 ## Progress
 - [x] Part 1–5: Basics, OOP fundamentals
 - [x] Part 6: Objects and Lists
-- [ ] Part 7: Sorting, searching, recursion (in progress)
-- [ ] Part 8: Collections (HashMap/HashSet)
+- [x] Part 7: Sorting, searching, larger programs
+- [ ] Part 8: Collections (HashMap/HashSet) (in progress)
 - [ ] Part 9: Interfaces, polymorphism
 - [ ] Part 10: Streams, lambdas
 - [ ] Part 11: Exceptions
