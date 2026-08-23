@@ -3,9 +3,8 @@ package BigYear;
 import java.util.Scanner;
 
 public class UI {
-    private boolean isRunning;
-    private Scanner sc;
-    private BirdDB dataBase;
+    private final Scanner sc;
+    private final BirdDB dataBase;
 
     public UI(Scanner sc) {
         this.sc = sc;
@@ -13,7 +12,7 @@ public class UI {
     }
 
     public void start() {
-        isRunning = true;
+        boolean isRunning = true;
         
         while(isRunning) {
             System.out.print("? ");
