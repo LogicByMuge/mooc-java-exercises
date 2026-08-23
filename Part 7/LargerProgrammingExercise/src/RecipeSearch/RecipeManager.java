@@ -14,4 +14,29 @@ public class RecipeManager {
             System.out.println(recipe);
         }
     }
+
+    public void findRecipeByName(String name) {
+        for(int i = 0; i < recipes.size(); i++) {
+            if(recipes.get(i).getName().contains(name)) {
+                System.out.println(recipes.get(i));
+            }
+        }
+    }
+
+    public void findRecipeByCookingTime(int time) {
+        for(int i = 0; i < recipes.size(); i++) {
+            if(recipes.get(i).getCookingTime() <= time) {
+                System.out.println(recipes.get(i));
+            }
+        }
+    }
+
+    public void findRecipeByIngredient(String ingredient) {
+        System.out.println("Recipes: ");
+        for(int i = 0; i < recipes.size(); i++) {
+            if(recipes.get(i).getIngredients().contains(ingredient)) {
+                System.out.println(recipes.get(i));
+            }
+        }
+    }
 }

@@ -22,7 +22,9 @@ public class UI {
         System.out.println("Commands:\n" +
                 "list - lists the recipes\n" +
                 "stop - stop the program\n" +
-                "find name - searches recipes by name");
+                "find name - searches recipes by name\n" +
+                "find cooking time - searches recipes by cooking time\n" +
+                "find ingredient - searches recipes by ingredient");
 
         this.recipeManager = new RecipeManager(fileReader.readFromFile(file));
 
@@ -38,6 +40,19 @@ public class UI {
                         isRunning = false;
                         break;
                     case "find name":
+                        System.out.print("Searched word: ");
+                        String name = sc.nextLine();
+                        recipeManager.findRecipeByName(name);
+                        break;
+                    case "find cooking time":
+                        System.out.print("Max cooking time: ");
+                        int time = Integer.parseInt(sc.nextLine());
+                        recipeManager.findRecipeByCookingTime(time);
+                        break;
+                    case "find ingredient":
+                        System.out.print("Ingredient: ");
+                        String ingredient = sc.nextLine();
+                        recipeManager.findRecipeByIngredient(ingredient);
                         break;
                     default:
                         System.out.println("Invalid command");

@@ -21,8 +21,8 @@ public class Recipe {
         return cookingTime;
     }
 
-    public void addIngredient(String ingredient) {
-        ingredients.add(ingredient);
+    public ArrayList<String> getIngredients() {
+        return ingredients;
     }
 
     public String toString() {
