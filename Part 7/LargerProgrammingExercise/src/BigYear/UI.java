@@ -27,6 +27,11 @@ public class UI {
                     String latinName = sc.nextLine();
                     dataBase.add(name, latinName);
                     break;
+                case "Observation":
+                    System.out.print("Name: ");
+                    String observe = sc.nextLine();
+                    dataBase.observation(observe);
+                    break;
                 case "All":
                     dataBase.all();
                     break;

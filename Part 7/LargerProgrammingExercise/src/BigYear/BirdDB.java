@@ -13,6 +13,14 @@ public class BirdDB {
         birds.add(new Bird(name,latinName));
     }
 
+    public void observation(String name) {
+        for(Bird bird : birds) {
+            if(bird.getName().contains(name)) {
+                bird.addObservation();
+            }
+        }
+    }
+
     public void all() {
         for(Bird bird : birds) {
             System.out.println(bird);

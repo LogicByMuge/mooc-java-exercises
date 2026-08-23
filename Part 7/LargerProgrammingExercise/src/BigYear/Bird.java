@@ -22,7 +22,12 @@ public class Bird {
         return observations;
     }
 
+    public void addObservation() {
+        observations++;
+    }
+
     public String toString() {
-        return getName() + "(" + getLatinName() + ") " + getObservations() + " observations";
+        return getName() + "(" + getLatinName() + ") " + getObservations() +
+                (getObservations() > 1 ? " observations" : " observation");
     }
 }
