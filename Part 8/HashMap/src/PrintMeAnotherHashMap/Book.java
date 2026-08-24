@@ -1,0 +1,19 @@
+package PrintMeAnotherHashMap;
+
+public class Book {
+    private final String title;
+    private final int year;
+
+    public Book(String title, int year) {
+        this.title = title;
+        this.year = year;
+    }
+
+    public String getName() {
+        return this.title;
+    }
+
+    public String toString() {
+        return "Name: " + title + " (" + year + ")";
+    }
+}
