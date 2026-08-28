@@ -20,11 +20,15 @@ public class SimpleDate {
             return false;
         }
         SimpleDate comparedDate = (SimpleDate) comparedObject;
-        if(this.day == comparedDate.day &&
+        return this.day == comparedDate.day &&
         this.month == comparedDate.month &&
-        this.year == comparedDate.year) {
-            return true;
-        }
-        return false;
+        this.year == comparedDate.year;
+    }
+
+    // I don't really get the deeper logic behind multiplying by 372 and 31.
+    // It's supposed to prevent collision between objects hash code that has something to do -
+    // with how many months there are.
+    public int hashCode() {
+        return year * 372 + month * 31 + day;
     }
 }
