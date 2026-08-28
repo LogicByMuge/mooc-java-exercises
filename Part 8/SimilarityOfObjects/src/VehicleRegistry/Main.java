@@ -5,30 +5,26 @@ import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
-        // the following is the same sample program shown in ex 8.13 description
-
         LicensePlate li1 = new LicensePlate("FI", "ABC-123");
         LicensePlate li2 = new LicensePlate("FI", "UXE-465");
         LicensePlate li3 = new LicensePlate("D", "B WQ-431");
 
-        ArrayList<LicensePlate> finnishPlates = new ArrayList<>();
-        finnishPlates.add(li1);
-        finnishPlates.add(li2);
+        VehicleRegistry registry = new VehicleRegistry();
 
-        LicensePlate newLi = new LicensePlate("FI", "ABC-123");
-        if (!finnishPlates.contains(newLi)) {
-            finnishPlates.add(newLi);
-        }
-        System.out.println("finnish: " + finnishPlates);
-        // if the equals-method hasn't been overwritten, the same license number will be added to the list againg
+        // Test add
+        System.out.println("Adding li1: " + registry.add(li1, "Arto"));   // true
+        System.out.println("Adding li2: " + registry.add(li2, "Pekka"));  // true
+        System.out.println("Adding li3: " + registry.add(li3, "Jürgen")); // true
+        System.out.println("Adding li1 again: " + registry.add(li1, "Matti")); // false
 
-        HashMap<LicensePlate, String> owners = new HashMap<>();
-        owners.put(li1, "Arto");
-        owners.put(li3, "Jürgen");
+        // Test get
+        System.out.println("Owner of li1: " + registry.get(li1)); // Arto
+        System.out.println("Owner of li3: " + registry.get(li3)); // Jürgen
+        System.out.println("Owner of new plate: " + registry.get(new LicensePlate("FI", "ZZZ-999"))); // null
 
-        System.out.println("omistajat:");
-        System.out.println(owners.get(new LicensePlate("FI", "ABC-123")));
-        System.out.println(owners.get(new LicensePlate("D", "B WQ-431")));
-        // if the hasCode-method hasn't been overwritten, the owners won't be found
+        // Test remove
+        System.out.println("Removing li2: " + registry.remove(li2)); // true
+        System.out.println("Owner of li2 after removal: " + registry.get(li2)); // null
+        System.out.println("Removing li2 again: " + registry.remove(li2)); // false
     }
 }
