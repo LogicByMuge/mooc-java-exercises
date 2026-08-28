@@ -26,5 +26,14 @@ public class Main {
         System.out.println("Removing li2: " + registry.remove(li2)); // true
         System.out.println("Owner of li2 after removal: " + registry.get(li2)); // null
         System.out.println("Removing li2 again: " + registry.remove(li2)); // false
+        System.out.println("Adding li2: " + registry.add(li2, "Arto"));   // true
+
+        // Test Print License
+        System.out.println("License Plates:");
+        registry.printLicensePlates();
+
+        // Test Print owners
+        System.out.println("Owners:");
+        registry.printOwners();
     }
 }

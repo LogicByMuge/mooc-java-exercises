@@ -1,12 +1,15 @@
 package VehicleRegistry;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class VehicleRegistry {
     private HashMap<LicensePlate, String> registry;
+    private ArrayList<String> printedOwners;
 
     public VehicleRegistry() {
         registry = new HashMap<>();
+        printedOwners = new ArrayList<>();
     }
 
     // If the license plate doesn't have an owner, the method returns true.
@@ -33,5 +36,23 @@ public class VehicleRegistry {
             return true;
         }
         return false;
+    }
+
+    // prints the license plates in the registry.
+    public void printLicensePlates() {
+        for(LicensePlate key : registry.keySet()) {
+            System.out.println(key);
+        }
+    }
+
+    // prints the owners of the cars in the registry.
+    // Each name should only be printed once, even if a particular person owns more than one car.
+    public void printOwners() {
+        for(LicensePlate key : registry.keySet()) {
+            if(!printedOwners.contains(registry.get(key))) {
+                System.out.println(registry.get(key));
+                printedOwners.add(registry.get(key));
+            }
+        }
     }
 }
