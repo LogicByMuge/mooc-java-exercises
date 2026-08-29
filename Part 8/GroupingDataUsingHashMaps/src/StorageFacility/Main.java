@@ -13,7 +13,12 @@ public class Main {
         facility.add("g63", "six");
         facility.add("g63", "pi");
 
-        System.out.println(facility.contents("a14"));
+        facility.remove("f156", "rollerblades");
+
         System.out.println(facility.contents("f156"));
+
+        facility.remove("f156", "rollerblades");
+
+        System.out.println(facility.storageUnits());
     }
 }

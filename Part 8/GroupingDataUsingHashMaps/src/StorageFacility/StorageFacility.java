@@ -24,4 +24,26 @@ public class StorageFacility {
         }
         return storage.get(storageUnit);
     }
+
+    // removes the given item from the given storage unit.
+    // NB! Only removes one item — if there are several items with the same name, the rest still remain.
+    // If the storage unit would be empty after the removal, the method also removes the unit.
+    public void remove(String storageUnit, String item) {
+        storage.get(storageUnit).remove(item);
+        if(storage.get(storageUnit).isEmpty()) {
+            storage.remove(storageUnit);
+        }
+    }
+
+    // returns the names of the storage units as a list.
+    // NB! Only the units that contain items are listed.
+    public ArrayList<String> storageUnits() {
+        ArrayList<String> storageUnit = new ArrayList<>();
+        for(String key : storage.keySet()) {
+            if(storage.get(key) != null) {
+                storageUnit.add(key);
+            }
+        }
+        return storageUnit;
+    }
 }
