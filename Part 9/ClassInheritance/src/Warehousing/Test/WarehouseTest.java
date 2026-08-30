@@ -1,5 +1,6 @@
-package Warehousing;
+package Warehousing.Test;
 
+import Warehousing.Warehouse;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
