@@ -19,10 +19,6 @@ public class ChangeHistory {
         history.clear();
     }
 
-    public String toString() {
-        return history.toString();
-    }
-
     public double maxValue() {
         double largest = history.get(0);
         for(int i = 0; i < history.size(); i++) {
@@ -50,5 +46,10 @@ public class ChangeHistory {
             sum += value;
         }
         return sum / history.size();
+    }
+
+    @Override
+    public String toString() {
+        return history.toString();
     }
 }

@@ -1,7 +1,7 @@
 package Warehousing;
 
 public class ProductWarehouse extends Warehouse{
-    private String productName;
+    protected String productName;
 
     public ProductWarehouse(String productName, double capacity) {
         super(capacity);

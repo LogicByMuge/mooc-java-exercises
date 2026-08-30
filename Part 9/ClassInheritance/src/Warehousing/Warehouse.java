@@ -1,8 +1,8 @@
 package Warehousing;
 
 public class Warehouse {
-    private double capacity = 0;
-    private double balance;
+    protected double capacity = 0;
+    protected double balance;
 
     // Creates an empty warehouse, which has the capacity provided as a parameter;
     // an invalid capacity (<=0) creates a useless warehouse, with the capacity 0.
