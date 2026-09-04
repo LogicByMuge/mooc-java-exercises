@@ -7,8 +7,8 @@ My solutions as I work through the University of Helsinki's Java Programming MOO
 - [x] Part 6: Objects and Lists
 - [x] Part 7: Sorting, searching, larger programs
 - [x] Part 8: Collections (HashMap/HashSet)
-- [ ] Part 9: Interfaces, polymorphism (in progress)
-- [ ] Part 10: Streams, lambdas
+- [x] Part 9: Interfaces, polymorphism
+- [ ] Part 10: Streams, lambdas (in progress)
 - [ ] Part 11: Exceptions
 - [ ] Part 12: Generics, collection internals
 
