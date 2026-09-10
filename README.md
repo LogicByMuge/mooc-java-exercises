@@ -9,7 +9,7 @@ My solutions as I work through the University of Helsinki's Java Programming MOO
 - [x] Part 8: Collections (HashMap/HashSet)
 - [x] Part 9: Interfaces, polymorphism
 - [x] Part 10: Streams, lambdas
-- [ ] Part 11: Class diagrams, Packages, Exceptions, Processing Files (in progress)
+- [ ] Part 11: Exceptions, Processing Files (in progress)
 - [ ] Part 12: Generics, collection internals
 
 ## Structure
